@@ -106,3 +106,19 @@ try{
 catch (ex){
     console.error(ex);
 }
+
+//UC3 Ability to add Contacts into Array
+let contactsArray = new Array();
+function AddContact(firstName,lastName,address,city,state,zip,phoneNumber,Email){
+    try{
+    let contactobject = new Contact(firstName,lastName,address,city,state,zip,phoneNumber,Email);
+    contactsArray.push(contactobject);
+    }
+    catch (ex){
+        console.error(ex);
+    }
+}
+AddContact("Prateek","Pai","Bangalore","Bangalore","Karnataka","560027","91 9945007207","prateek@gmail.com");
+AddContact("Vasanth","Pai","Sirsi","Sirsi","Karnataka","581336","91 9482652477","vasanth@gmail.com");
+AddContact("Suhas","Manchi","Shivmoga","Shivmoga","Karnataka","577425","91 7760054592","suhas@gmail.com");
+contactsArray.forEach(contactsDetails => console.log(contactsDetails.toString()));
