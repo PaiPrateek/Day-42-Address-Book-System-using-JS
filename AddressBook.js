@@ -227,7 +227,8 @@ function duplicateEntry(){
 //UC8 Seach Person by City or State
 function searchPersonByStateorCity(){
     let cityorStateName = prompt("Enter City or State Name: ");
-    let contactCityStateArray = contactsArray.filter((contacts) => contacts.state == cityorStateName || contacts.city == cityorStateName);
+    let contactCityStateArray = new Array();
+     contactCityStateArray = contactsArray.filter((contacts) => contacts.state == cityorStateName || contacts.city == cityorStateName);
     console.log(contactCityStateArray);
 }
 searchPersonByStateorCity();
@@ -235,9 +236,17 @@ searchPersonByStateorCity();
 //UC9 View Person by City or State
 function ViewPersonByStateorCity(){
     let cityorStateName = prompt("Enter City or State Name: ");
-    let ViewcontactCityStateArray = contactsArray.filter((contacts) => contacts.state == cityorStateName || contacts.city == cityorStateName);
+    let ViewcontactCityStateArray = new Array();
+     ViewcontactCityStateArray = contactsArray.filter((contacts) => contacts.state == cityorStateName || contacts.city == cityorStateName);
     ViewcontactCityStateArray.forEach(contactperson=> {contactperson.firstName})
     console.log(ViewcontactCityStateArray);
 }
 ViewPersonByStateorCity();
 
+//UC10 Persons count by city or state
+function personsCountStateorCity(){
+    let cityorStateName = prompt("Enter City or State Name: ");
+    let PersonCOuntArray = new Array();
+    PersonCOuntArray = contactsArray.filter((contacts) => contacts.state == cityorStateName || contacts.city == cityorStateName);
+    console.log(PersonCOuntArray.length);
+}
