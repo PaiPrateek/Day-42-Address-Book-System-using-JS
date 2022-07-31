@@ -250,3 +250,11 @@ function personsCountStateorCity(){
     PersonCOuntArray = contactsArray.filter((contacts) => contacts.state == cityorStateName || contacts.city == cityorStateName);
     console.log(PersonCOuntArray.length);
 }
+personsCountStateorCity()
+//UC11 Sort Person name Alphabetically
+function SortPersonsAlphabetically(){
+    let sortpersonname = new Array();
+    sortpersonname = contactsArray.filter((contacts) => contacts.firstName);
+    console.log(sortpersonname.sort());
+}
+SortPersonsAlphabetically()
