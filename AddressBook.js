@@ -251,10 +251,36 @@ function personsCountStateorCity(){
     console.log(PersonCOuntArray.length);
 }
 personsCountStateorCity()
+
 //UC11 Sort Person name Alphabetically
 function SortPersonsAlphabetically(){
     let sortpersonname = new Array();
-    sortpersonname = contactsArray.filter((contacts) => contacts.firstName);
-    console.log(sortpersonname.sort());
+    sortpersonname = contactsArray.sort((contacts) => contacts.firstName);
+    console.log(sortpersonname);
 }
 SortPersonsAlphabetically()
+
+
+//UC12 Sort City name Alphabetically
+function SortCityAlphabetically(){
+    let sortcityname = new Array();
+    sortcityname = contactsArray.sort((contacts) => contacts.city);
+    console.log(sortcityname);
+}
+SortCityAlphabetically()
+
+//UC12 Sort State name Alphabetically
+function SortStateAlphabetically(){
+    let sortStatename = new Array();
+    sortStatename = contactsArray.sort((contacts) => contacts.state);
+    console.log(sortStatename);
+}
+SortStateAlphabetically()
+
+//UC12 Sort by Zipcode
+function SortZipAlphabetically(){
+    let sortzip = new Array();
+    sortzip = contactsArray.sort((contacts) => contacts.zip);
+    console.log(sortzip);
+}
+SortZipAlphabetically()
